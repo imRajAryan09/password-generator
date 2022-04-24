@@ -11,7 +11,14 @@ nav {
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 29px;
-        cursor: pointer;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.logo-icon {
+			margin-right: 5px;
+			font-size: 28px;
+		}
 	}
 	.nav-items {
 		ul {
@@ -23,8 +30,8 @@ nav {
 				font-weight: 400;
 				font-size: 18px;
 				line-height: 22px;
-                padding-inline: 100px;
-                cursor: pointer;
+				padding-inline: 100px;
+				cursor: pointer;
 			}
 		}
 	}

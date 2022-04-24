@@ -1,3 +1,57 @@
 .home {
 	background-color: #023047;
+	min-height: 100vh;
+	.home-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: calc(100vh - 80px); // 80px is the hright of the navbar
+		margin-inline: 125px;
+		padding-inline: 125px;
+		gap: 40px;
+		.text {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 30px;
+			font-family: "Poppins";
+			h1 {
+				font-weight: 700;
+				font-size: 64px;
+				line-height: 96px;
+				color: #cfe8f3;
+			}
+			p {
+				font-weight: 400;
+				font-size: 30px;
+				line-height: 48px;
+				color: #cfe8f3;
+			}
+			.button {
+				font-family: "Inter" !important;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 29px;
+				color: #ffffff;
+				background: #ff725e;
+				border-radius: 40px;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				padding: 25px 80px;
+				margin-top: 30px;
+				// align-self: center;
+			}
+		}
+		.image {
+			height: 90%;
+			width: 90%;
+			img {
+				height: 90%;
+				width: 90%;
+				object-fit: fill;
+			}
+		}
+	}
 }
