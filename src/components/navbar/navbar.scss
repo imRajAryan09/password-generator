@@ -1,0 +1,31 @@
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	background-color: hsl(198, 60%, 88%);
+	padding-inline: 100px;
+	color: #023047;
+	.logo {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+        cursor: pointer;
+	}
+	.nav-items {
+		ul {
+			display: flex;
+			list-style: none;
+			align-items: center;
+			justify-content: space-between;
+			li {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px;
+                padding-inline: 100px;
+                cursor: pointer;
+			}
+		}
+	}
+}
