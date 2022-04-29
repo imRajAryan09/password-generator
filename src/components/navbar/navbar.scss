@@ -1,37 +1,44 @@
-nav {
+header {
+	background: #cfe8f3;
+	height: 80px;
+	box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.6);
+	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	background-color: hsl(198, 60%, 88%);
-	padding-inline: 100px;
-	color: #023047;
-	.logo {
-		font-family: "Inter";
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 29px;
-		cursor: pointer;
+	.header-content {
+		margin: 0 60px;
+		width: 100%;
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		justify-content: center;
-		.logo-icon {
-			margin-right: 5px;
-			font-size: 28px;
-		}
-	}
-	.nav-items {
-		ul {
+		.logo {
+			font-family: "Inter";
+			font-weight: 600;
+			font-size: 2rem;
 			display: flex;
-			list-style: none;
 			align-items: center;
-			justify-content: space-between;
-			li {
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 22px;
-				padding-inline: 100px;
-				cursor: pointer;
+			justify-content: center;
+			cursor: pointer;
+			&-icon {
+				margin-right: 10px;
+				font-size: 2rem;
+			}
+		}
+		nav {
+			.nav-items {
+				ul {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					li {
+						list-style: none;
+						margin: 0 4rem;
+						cursor: pointer;
+						font-family: "Inter";
+						font-size: 18px;
+						line-height: 22px;
+					}
+				}
 			}
 		}
 	}
