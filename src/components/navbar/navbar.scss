@@ -3,7 +3,7 @@ header {
 	background: $color-secondary;
 	height: $nav-height;
 	width: 100%;
-	@include flex(null, center);
+	@include flex(center, center);
 	.header-content {
 		margin: $margin-uni;
 		width: 100%;
@@ -11,25 +11,33 @@ header {
 		.logo {
 			cursor: pointer;
 			@include flex(center, center);
-			@include font($Inter, 2rem, 600);
+			span {
+				@include font($Inter, 2rem, 600);
+			}
 			&-icon {
 				margin-right: 10px;
 				font-size: 2rem;
 			}
 		}
 		nav {
-			.nav-items {
-				ul {
-					@include flex(space-between, center);
-					li {
-						list-style: none;
-						margin: 0 4rem;
-						cursor: pointer;
-						@include font($Inter, 18px);
-						@include nav-animation();
-					}
+			ul {
+				@include flex(space-between, center);
+				li {
+					list-style: none;
+					margin: 0 4rem;
+					cursor: pointer;
+					@include font($Inter, 18px);
+					@include nav-animation();
 				}
 			}
+		}
+		.hamburger {
+			cursor: pointer;
+			@include flex(center, center);
+			.hamburger-icon {
+				font-size: 2rem;
+			}
+			display: none;
 		}
 	}
 }

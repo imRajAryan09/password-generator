@@ -1,22 +1,24 @@
+import { Pattern, Menu } from "@mui/icons-material";
 import "./navbar.scss";
-import PatternIcon from "@mui/icons-material/Pattern";
+
 const Navbar = () => {
 	return (
 		<header>
 			<div className="header-content">
 				<div className="logo">
-					<PatternIcon className="logo-icon" />
-					PassGen
+					<Pattern className="logo-icon" />
+					<span>KeyGen</span>
 				</div>
 				<nav>
-					<div className="nav-items">
-						<ul>
-							<li><span data-hover="Home">Home</span></li>
-							<li><span data-hover="About">About</span></li>
-							<li><span data-hover="Generate">Generate</span></li>
-						</ul>
-					</div>
+					<ul>
+						<li>Home</li>
+						<li>About</li>
+						<li>Generate</li>
+					</ul>
 				</nav>
+				<div className="hamburger">
+					<Menu className="hamburger-icon" />
+				</div>
 			</div>
 		</header>
 	);
