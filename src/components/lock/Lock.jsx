@@ -2,9 +2,9 @@ import "./lock.scss";
 
 const Lock = () => {
 	return (
-		<div class="lock-container">
-			<div class="lock">
-				<div class="keyhole"></div>
+		<div className="lock-container">
+			<div className="lock">
+				<div className="keyhole"></div>
 			</div>
 		</div>
 	);

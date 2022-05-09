@@ -31,7 +31,7 @@ $nav-height: 80px;
 // media queries
 @mixin for-size($size) {
 	@if $size == tablet-portrait {
-		@media screen and(max-width: 375px) {
+		@media screen and(max-width: 475px) {
 			@content;
 		}
 	} @else if $size == tablet-landscape {
