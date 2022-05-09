@@ -1,23 +1,16 @@
+@import "../../styles/variables.scss";
 header {
-	background: #cfe8f3;
-	height: 80px;
-	box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.6);
+	background: $color-secondary;
+	height: $nav-height;
 	width: 100%;
-	display: flex;
-	align-items: center;
+	@include flex(null, center);
 	.header-content {
-		margin: 0 60px;
+		margin: $margin-uni;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flex(space-between, center);
 		.logo {
-			font-family: "Inter";
-			font-weight: 600;
-			font-size: 2rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flex(center, center);
+			@include font($Inter, 2rem, 600);
 			cursor: pointer;
 			&-icon {
 				margin-right: 10px;
@@ -27,15 +20,12 @@ header {
 		nav {
 			.nav-items {
 				ul {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
+					@include flex(space-between, center);
 					li {
 						list-style: none;
 						margin: 0 4rem;
 						cursor: pointer;
-						font-family: "Inter";
-						font-size: 18px;
+						@include font($Inter, 18px);
 						line-height: 22px;
 					}
 				}

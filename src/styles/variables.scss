@@ -1,0 +1,29 @@
+// colors
+$color-primary: #023047;
+$color-secondary: #cfe8f3;
+$color-btn: #ff725e;
+$color-white: #ffffff;
+
+// fonts
+$Poppins: "Poppins", sans-serif;
+$Inter: "Inter", sans-serif;
+
+// margins
+$margin-uni: 0 125px;
+
+$nav-height: 80px;
+
+// for display:flex
+@mixin flex($jus-co, $ai, $flex-dir: row) {
+	display: flex;
+	justify-content: $jus-co;
+	align-items: $ai;
+	flex-direction: $flex-dir;
+}
+
+// for fonts
+@mixin font($fof, $fos, $fow: normal) {
+	font-family: $fof;
+	font-size: $fos;
+	font-weight: $fow;
+}
