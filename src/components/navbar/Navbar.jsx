@@ -11,9 +11,9 @@ const Navbar = () => {
 				<nav>
 					<div className="nav-items">
 						<ul>
-							<li>Home</li>
-							<li>About</li>
-							<li>Generate</li>
+							<li><span data-hover="Home">Home</span></li>
+							<li><span data-hover="About">About</span></li>
+							<li><span data-hover="Generate">Generate</span></li>
 						</ul>
 					</div>
 				</nav>

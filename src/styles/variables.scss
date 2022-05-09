@@ -13,7 +13,7 @@ $margin-uni: 0 125px;
 
 $nav-height: 80px;
 
-// for display:flex
+// display : flex
 @mixin flex($jus-co, $ai, $flex-dir: row) {
 	display: flex;
 	justify-content: $jus-co;
@@ -21,9 +21,69 @@ $nav-height: 80px;
 	flex-direction: $flex-dir;
 }
 
-// for fonts
+// fonts
 @mixin font($fof, $fos, $fow: normal) {
 	font-family: $fof;
 	font-size: $fos;
 	font-weight: $fow;
+}
+
+// media queries
+@mixin for-size($size) {
+	@if $size == phone-only {
+		@media (max-width: 599px) {
+			@content;
+		}
+	} @else if $size == tablet-portrait-up {
+		@media (min-width: 600px) {
+			@content;
+		}
+	} @else if $size == tablet-landscape-up {
+		@media (min-width: 900px) {
+			@content;
+		}
+	} @else if $size == desktop-up {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $size == big-desktop-up {
+		@media (min-width: 1800px) {
+			@content;
+		}
+	}
+}
+
+// nav links animation
+@mixin nav-animation() {
+	&::before,
+	&::after {
+		display: inline-block;
+		opacity: 0;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+		-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+		transition: transform 0.3s, opacity 0.2s;
+	}
+	&::before {
+		margin-right: 10px;
+		content: "[";
+		-webkit-transform: translateX(20px);
+		-moz-transform: translateX(20px);
+		transform: translateX(20px);
+	}
+	&::after {
+		margin-left: 10px;
+		content: "]";
+		-webkit-transform: translateX(-20px);
+		-moz-transform: translateX(-20px);
+		transform: translateX(-20px);
+	}
+	&:hover::before,
+	&:hover::after,
+	&:focus::before,
+	&:focus::after {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		transform: translateX(0px);
+	}
 }

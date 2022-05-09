@@ -9,9 +9,9 @@ header {
 		width: 100%;
 		@include flex(space-between, center);
 		.logo {
+			cursor: pointer;
 			@include flex(center, center);
 			@include font($Inter, 2rem, 600);
-			cursor: pointer;
 			&-icon {
 				margin-right: 10px;
 				font-size: 2rem;
@@ -26,7 +26,7 @@ header {
 						margin: 0 4rem;
 						cursor: pointer;
 						@include font($Inter, 18px);
-						line-height: 22px;
+						@include nav-animation();
 					}
 				}
 			}
