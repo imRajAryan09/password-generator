@@ -25,7 +25,7 @@ header {
 				li {
 					margin: 0 4rem;
 					cursor: pointer;
-					@include font($Inter, 18px);
+					@include font($Inter, 20px);
 					@include nav-animation();
 				}
 			}

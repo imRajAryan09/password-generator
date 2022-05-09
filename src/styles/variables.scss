@@ -31,7 +31,7 @@ $nav-height: 80px;
 // media queries
 @mixin for-size($size) {
 	@if $size == tablet-portrait {
-		@media (min-width: 600px) {
+		@media screen and(max-width: 375px) {
 			@content;
 		}
 	} @else if $size == tablet-landscape {
@@ -46,7 +46,7 @@ $nav-height: 80px;
 		@media (min-width: 1800px) {
 			@content;
 		}
-	} 
+	}
 }
 
 // nav links animation
