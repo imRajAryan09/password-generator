@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+$bg-lock: #fff;
+
+.lock-container {
+    @include flex(center, center);
+	.lock {
+		background-color: $bg-lock;
+		width: 24px;
+		height: 18px;
+        border-radius: 3px;
+		animation: wiggle 1.5s linear infinite alternate;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			left: 5px;
+			animation: close 3s linear infinite alternate;
+		}
+		&:before {
+			border-top: 3px solid $bg-lock;
+			border-left: 3px solid $bg-lock;
+			border-right: 3px solid $bg-lock;
+			border-radius: 10px 10px 0 0;
+			width: 14px;
+			height: 12px;
+			top: -20px;
+			transform-origin: 1px 0;
+		}
+		&:after {
+			width: 3px;
+			background-color: $bg-lock;
+			height: 15px;
+			top: -11px;
+		}
+		.keyhole {
+			position: absolute;
+			width: 4px;
+			height: 7px;
+			background-color: $color-btn;
+			border-radius: 5px;
+			top: 6px;
+			left: 10px;
+		}
+	}
+}
+
+@include lock-animation();

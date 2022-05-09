@@ -63,3 +63,17 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
