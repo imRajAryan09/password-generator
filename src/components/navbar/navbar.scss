@@ -4,19 +4,40 @@ header {
 	height: $nav-height;
 	width: 100%;
 	@include flex(center, center);
+	@include for-size(tablet-portrait) {
+		& {
+			height: $nav-height-mobile;
+		}
+	}
 	.header-content {
 		margin: $margin-uni;
 		width: 100%;
 		@include flex(space-between, center);
+		@include for-size(tablet-portrait) {
+			& {
+				margin: 0 60px;
+			}
+		}
 		.logo {
 			cursor: pointer;
 			@include flex(center, center);
 			span {
 				@include font($Inter, 2rem, 600);
+				@include for-size(tablet-portrait) {
+					& {
+						@include font($Inter, 1.5rem, 600);
+					}
+				}
 			}
 			&-icon {
 				margin-right: 10px;
 				font-size: 2rem;
+				@include for-size(tablet-portrait) {
+					& {
+						font-size: 1.5rem;
+						margin-right: 5px;
+					}
+				}
 			}
 		}
 		nav {
@@ -43,6 +64,11 @@ header {
 				font-size: 2rem;
 			}
 			display: none;
+			@include for-size(tablet-portrait) {
+				& {
+					@include flex(center, center);
+				}
+			}
 		}
 	}
 }

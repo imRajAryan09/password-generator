@@ -12,6 +12,7 @@ $Inter: "Inter", sans-serif;
 $margin-uni: 0 125px;
 
 $nav-height: 80px;
+$nav-height-mobile:60px;
 
 // display : flex
 @mixin flex($jus-co, $ai, $flex-dir: row) {
