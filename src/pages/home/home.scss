@@ -5,7 +5,7 @@
 	width: 100%;
 	.home-content {
 		@include flex(space-between, center);
-		min-height: calc(100vh - $nav-height); // 80px is the hright of the navbar
+		min-height: calc(100vh - 80px); // 80px is the height of the navbar
 		margin-inline: 125px;
 		gap: 40px;
 		@include for-size(tablet-portrait) {
