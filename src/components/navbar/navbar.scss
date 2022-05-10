@@ -58,6 +58,7 @@ header {
 					backdrop-filter: blur(2px);
 					transform: translate(0);
 					transition: 0.3s ease transform;
+					z-index: 1;
 				}
 				&.isMenu {
 					transform: translate(100%);
@@ -105,6 +106,7 @@ header {
 					position: relative;
 					.close-icon {
 						color: $color-white;
+						z-index: 2;
 					}
 				}
 			}
