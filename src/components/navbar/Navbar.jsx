@@ -5,8 +5,8 @@ import "./navbar.scss";
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [size, setSize] = useState({
-		width: undefined,
-		height: undefined,
+		width: window.innerWidth,
+		height: window.innerHeight,
 	});
 	useEffect(() => {
 		const handleResize = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 	useEffect(() => {
-		if (size.width > 475 && menuOpen) {
+		if (size.width > 768 && menuOpen) {
 			setMenuOpen(false);
 		}
 	}, [size.width, menuOpen]);
@@ -34,7 +34,7 @@ const Navbar = () => {
 					<Pattern className="logo-icon" />
 					<span>KeyGen</span>
 				</div>
-				<nav className={menuOpen && size.width < 475 ? "isMenu" : ""}>
+				<nav className={menuOpen && size.width < 768 ? "isMenu" : ""}>
 					<ul>
 						<li>Home</li>
 						<li>About</li>
