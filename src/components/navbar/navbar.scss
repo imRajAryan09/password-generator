@@ -69,6 +69,8 @@ header {
 					& {
 						@include flex(null, null, column);
 						gap: 20px;
+						margin: 0;
+						padding: 0;
 					}
 				}
 				li {
@@ -100,7 +102,7 @@ header {
 					@include flex(center, center);
 					transition: 0.3s ease all;
 					position: relative;
-					.close-icon{
+					.close-icon {
 						color: $color-white;
 					}
 				}
