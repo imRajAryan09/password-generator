@@ -17,7 +17,6 @@ const Navbar = () => {
 			});
 		};
 		window.addEventListener("resize", handleResize);
-
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
@@ -30,6 +29,7 @@ const Navbar = () => {
 	const menuToggleHandler = () => {
 		setMenuOpen((p) => !p);
 	};
+
 	return (
 		<header>
 			<div className="header-content">
@@ -37,7 +37,7 @@ const Navbar = () => {
 					<Pattern className="logo-icon" />
 					<span>KeyGen</span>
 				</div>
-				<nav className={menuOpen && size.width < 768 ? "isMenu" : ""}>
+				<nav className={menuOpen && size.width < 475 ? "isMenu" : ""}>
 					<ul>
 						<li>Home</li>
 						<li>About</li>
