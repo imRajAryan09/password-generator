@@ -15,7 +15,7 @@ header {
 		@include flex(space-between, center);
 		@include for-size(tablet-portrait) {
 			& {
-				margin: $margin-mobile-nav;
+				margin: $margin-mobile;
 			}
 		}
 		.logo {
