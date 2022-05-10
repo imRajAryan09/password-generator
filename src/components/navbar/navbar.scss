@@ -4,6 +4,7 @@ header {
 	height: $nav-height;
 	width: 100%;
 	@include flex(center, center);
+	transition: 0.3s ease all;
 	@include for-size(tablet-portrait) {
 		& {
 			height: $nav-height-mobile;
@@ -12,6 +13,8 @@ header {
 	.header-content {
 		margin: $margin-desktop;
 		width: 100%;
+		overflow: hidden;
+		position: relative;
 		@include flex(space-between, center);
 		@include for-size(tablet-portrait) {
 			& {
@@ -41,17 +44,44 @@ header {
 			}
 		}
 		nav {
+			@include for-size(tablet-portrait) {
+				& {
+					top: 0;
+					right: 100%;
+					bottom: 0;
+					width: 100%;
+					height: 100vh;
+					position: fixed;
+					@include flex(center, center, column);
+					text-align: center;
+					background-color: rgba($color-primary, 0.8);
+					backdrop-filter: blur(2px);
+					transform: translate(0);
+					transition: 0.3s ease transform;
+				}
+				&.isMenu {
+					transform: translate(100%);
+				}
+			}
 			ul {
 				@include flex(space-between, center);
+				@include for-size(tablet-portrait) {
+					& {
+						@include flex(null, null, column);
+						gap: 20px;
+					}
+				}
 				li {
 					margin: 0 4rem;
 					cursor: pointer;
+					transition: 0.3s ease all;
+					color: $color-secondary;
 					@include font($Inter, 20px);
 					@include nav-animation();
 					@include for-size(tablet-portrait) {
 						& {
-							@include font($Inter, 18px);
-							display: none;
+							@include font($Inter, 20px);
+							@include nav-animation();
 						}
 					}
 				}
@@ -59,6 +89,8 @@ header {
 		}
 		.hamburger {
 			cursor: pointer;
+			transition: 0.3s ease all;
+			color: $color-primary;
 			@include flex(center, center);
 			.hamburger-icon {
 				font-size: 2rem;
@@ -67,6 +99,8 @@ header {
 			@include for-size(tablet-portrait) {
 				& {
 					@include flex(center, center);
+					transition: 0.3s ease all;
+					position: relative;
 				}
 			}
 		}

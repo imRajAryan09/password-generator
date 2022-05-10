@@ -1,7 +1,35 @@
-import { Pattern, Menu } from "@mui/icons-material";
+import { Pattern, Menu, Close } from "@mui/icons-material";
+import { useEffect, useState } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [size, setSize] = useState({
+		width: undefined,
+		height: undefined,
+	});
+
+	useEffect(() => {
+		const handleResize = () => {
+			setSize({
+				width: window.innerWidth,
+				height: window.innerHeight,
+			});
+		};
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	useEffect(() => {
+		if (size.width > 768 && menuOpen) {
+			setMenuOpen(false);
+		}
+	}, [size.width, menuOpen]);
+
+	const menuToggleHandler = () => {
+		setMenuOpen((p) => !p);
+	};
 	return (
 		<header>
 			<div className="header-content">
@@ -9,7 +37,7 @@ const Navbar = () => {
 					<Pattern className="logo-icon" />
 					<span>KeyGen</span>
 				</div>
-				<nav>
+				<nav className={menuOpen && size.width < 768 ? "isMenu" : ""}>
 					<ul>
 						<li>Home</li>
 						<li>About</li>
@@ -17,7 +45,11 @@ const Navbar = () => {
 					</ul>
 				</nav>
 				<div className="hamburger">
-					<Menu className="hamburger-icon" />
+					{!menuOpen ? (
+						<Menu className="hamburger-icon" onClick={menuToggleHandler} />
+					) : (
+						<Close className="hamburger-icon" onClick={menuToggleHandler} />
+					)}
 				</div>
 			</div>
 		</header>
@@ -25,3 +57,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
