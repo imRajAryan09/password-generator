@@ -34,7 +34,7 @@ const Navbar = () => {
 					<Pattern className="logo-icon" />
 					<span>KeyGen</span>
 				</div>
-				<nav className={menuOpen && size.width < 768 ? "isMenu" : ""}>
+				<nav className={menuOpen && size.width <= 768 ? "isMenu" : ""}>
 					<ul>
 						<li>Home</li>
 						<li>About</li>

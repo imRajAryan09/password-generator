@@ -77,13 +77,14 @@ header {
 					margin: 0 4rem;
 					cursor: pointer;
 					transition: 0.3s ease all;
-					color: $color-secondary;
+					color: $color-primary;
 					@include font($Inter, 20px);
 					@include nav-animation();
 					@include for-size(tablet-portrait) {
 						& {
 							@include font($Inter, 20px);
 							@include nav-animation();
+							color:$color-secondary;
 						}
 					}
 				}
