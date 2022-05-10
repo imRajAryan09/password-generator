@@ -8,7 +8,6 @@ const Navbar = () => {
 		width: undefined,
 		height: undefined,
 	});
-
 	useEffect(() => {
 		const handleResize = () => {
 			setSize({
@@ -19,13 +18,11 @@ const Navbar = () => {
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
-
 	useEffect(() => {
-		if (size.width > 768 && menuOpen) {
+		if (size.width > 475 && menuOpen) {
 			setMenuOpen(false);
 		}
 	}, [size.width, menuOpen]);
-
 	const menuToggleHandler = () => {
 		setMenuOpen((p) => !p);
 	};
