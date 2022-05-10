@@ -90,7 +90,6 @@ header {
 		.hamburger {
 			cursor: pointer;
 			transition: 0.3s ease all;
-			color: $color-primary;
 			@include flex(center, center);
 			.hamburger-icon {
 				font-size: 2rem;
@@ -101,6 +100,9 @@ header {
 					@include flex(center, center);
 					transition: 0.3s ease all;
 					position: relative;
+					.close-icon{
+						color: $color-white;
+					}
 				}
 			}
 		}

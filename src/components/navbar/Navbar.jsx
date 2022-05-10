@@ -48,7 +48,7 @@ const Navbar = () => {
 					{!menuOpen ? (
 						<Menu className="hamburger-icon" onClick={menuToggleHandler} />
 					) : (
-						<Close className="hamburger-icon" onClick={menuToggleHandler} />
+						<Close className="close-icon" onClick={menuToggleHandler} />
 					)}
 				</div>
 			</div>
