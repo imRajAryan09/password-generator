@@ -10,12 +10,12 @@ header {
 		}
 	}
 	.header-content {
-		margin: $margin-uni;
+		margin: $margin-desktop;
 		width: 100%;
 		@include flex(space-between, center);
 		@include for-size(tablet-portrait) {
 			& {
-				margin: 0 60px;
+				margin: $margin-mobile-nav;
 			}
 		}
 		.logo {

@@ -15,7 +15,7 @@ const Home = () => {
 					<h1>Keep Your Private Data Secure</h1>
 					<p>Generate secure and strong passwords with ease. </p>
 					<div className="button">
-						<Lock className="lock"/>
+						<Lock className="lock-icon"/>
 						<span>Generate Password</span>
 					</div>
 				</div>
