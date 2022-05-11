@@ -12,7 +12,7 @@ const Home = () => {
 			</div>
 			<div className="home-content">
 				<div className="text">
-					<h1>Keep Your Private Data Secure</h1>
+					<h1>Keep Your Data Secure</h1>
 					<p>Generate secure and strong passwords with ease. </p>
 					<div className="button">
 						<Lock className="lock-icon"/>

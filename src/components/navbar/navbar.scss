@@ -83,7 +83,7 @@ header {
 					@include nav-animation();
 					@include for-size(tablet-portrait) {
 						& {
-							@include font($Inter, 20px);
+							@include font($Inter, 24px);
 							@include nav-animation();
 							color:$color-secondary;
 						}
