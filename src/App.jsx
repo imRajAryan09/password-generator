@@ -1,12 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/home/Home";
+import Generate from "./pages/generate/Generate";
+// import Home from "./pages/home/Home";
 
 function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<Home />
+				<Generate />
 			</BrowserRouter>
 		</div>
 	);
