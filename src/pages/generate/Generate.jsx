@@ -14,7 +14,12 @@ const Generate = () => {
 						<div className="form-item">
 							<label for="len">Required Password Length :</label>
 							<div className="check-eg">
-								<input type="text" id="len" name="len"></input>
+								<input
+									type="text"
+									id="len"
+									name="len"
+									placeholder="Enter Password Length"
+								></input>
 							</div>
 						</div>
 						<div className="form-item">
