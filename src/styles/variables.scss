@@ -39,7 +39,7 @@ $nav-height-mobile: 60px;
 			@content;
 		}
 	} @else if $size == desktop {
-		@media (max-width: 1024px) {
+		@media (min-width: 1024px) {
 			@content;
 		}
 	}
