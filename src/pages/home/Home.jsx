@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
 import BgSvg from "../../assets/hero-svg-pwdgen.png";
 import Lock from "../../components/lock/Lock";
+import { Link } from "react-router-dom";
 const Home = () => {
 	return (
 		<div className="home">
@@ -14,10 +15,12 @@ const Home = () => {
 				<div className="text">
 					<h1>Keep Your Data Secure</h1>
 					<p>Generate secure and strong passwords with ease. </p>
-					<div className="button">
-						<Lock className="lock-icon"/>
-						<span>Generate Password</span>
-					</div>
+					<Link to="/generate">
+						<div className="button">
+							<Lock className="lock-icon" />
+							<span>Generate Password</span>
+						</div>
+					</Link>
 				</div>
 				<div className="image">
 					<img src={BgSvg} alt="hero-img" />

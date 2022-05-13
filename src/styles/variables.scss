@@ -39,7 +39,7 @@ $nav-height-mobile: 60px;
 			@content;
 		}
 	} @else if $size == desktop {
-		@media (min-width: 1024px) {
+		@media (max-width: 1024px) {
 			@content;
 		}
 	}
@@ -118,5 +118,89 @@ $nav-height-mobile: 60px;
 		100% {
 			transform: rotate(0);
 		}
+	}
+}
+
+// mixin to remove arrows from the input type number
+@mixin arrow-input-disappear() {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	/* Firefox */
+	&[type="number"] {
+		-moz-appearance: textfield;
+	}
+}
+
+@mixin custom-checkbox() {
+	input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.checkbox-custom {
+		height: 20px;
+		width: 20px;
+		background-color: transparent;
+		border-radius: 5px;
+		border: 1px solid $color-secondary;
+		transition: all 0.3s ease-out;
+		&::before {
+			position: absolute;
+			content: "";
+			left: 10px;
+			right: 10px;
+			height: 0;
+			width: 0;
+			border-radius: 5px;
+			border: 2px solid $color-secondary;
+			transform: scale(0);
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			left: 10px;
+			right: 10px;
+			height: 0;
+			width: 0;
+			border-radius: 5px;
+			border: solid #023b57;
+			border-width: 0 3px 3px 0;
+			transform: rotate(0deg) scale(0);
+			opacity: 1;
+			transition: all 0.15s ease-out;
+		}
+	}
+	input[type="checkbox"]:checked ~ .checkbox-custom {
+		background-color: #fff;
+		border-radius: 5px;
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+		border: 2px solid $color-secondary;
+	}
+	input[type="checkbox"]:checked ~ .checkbox-custom::before {
+		left: -2px;
+		top: -2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 5px;
+		transform: scale(3);
+		opacity: 0;
+		z-index: 999;
+		transition: all 0.15s ease-out;
+	}
+	input[type="checkbox"]:checked ~ .checkbox-custom::after {
+		transform: rotate(45deg) scale(1);
+		opacity: 1;
+		left: 5px;
+		top: 1px;
+		width: 6px;
+		height: 12px;
+		border: solid #023b57;
+		border-width: 0 2px 2px 0;
+		background-color: transparent;
+		border-radius: 0;
 	}
 }

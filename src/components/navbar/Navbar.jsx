@@ -1,5 +1,6 @@
 import { Pattern, Menu, Close } from "@mui/icons-material";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -30,15 +31,23 @@ const Navbar = () => {
 	return (
 		<header>
 			<div className="header-content">
-				<div className="logo">
-					<Pattern className="logo-icon" />
-					<span>KeyGen</span>
-				</div>
+				<Link to="/">
+					<div className="logo">
+						<Pattern className="logo-icon" />
+						<span>KeyGen</span>
+					</div>
+				</Link>
 				<nav className={menuOpen && size.width <= 768 ? "isMenu" : ""}>
 					<ul>
-						<li>Home</li>
-						<li>About</li>
-						<li>Generate</li>
+						<Link to="/">
+							<li>Home</li>
+						</Link>
+						<Link to="/about">
+							<li>About</li>
+						</Link>
+						<Link to="/generate">
+							<li>Generate</li>
+						</Link>
 					</ul>
 				</nav>
 				<div className="hamburger">

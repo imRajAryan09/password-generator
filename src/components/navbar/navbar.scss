@@ -23,7 +23,7 @@ header {
 		}
 		@include for-size(desktop) {
 			& {
-				margin: $margin-desktop;
+				margin: $margin-mobile;
 			}
 		}
 		.logo {

@@ -20,22 +20,40 @@
 				.form-item {
 					@include flex(space-between, center);
 					width: 100%;
-					gap: 30px;
 					.check-eg {
 						@include flex(center, center);
+						gap: 5px;
+						@include custom-checkbox();
 					}
 					label {
 						color: $color-secondary;
-						@include font($Inter, 18px);
-						padding-inline: 5px;
+						@include flex(space-between, center);
+						@include font($Poppins, 18px);
+						padding-inline: 10px;
+						width: 100%;
+						gap: 50px;
 					}
 					input {
-						@include font($Inter, 20px);
-						padding-inline: 5px;
+						@include font($Poppins, 20px);
+						@include flex(center, center);
+						text-align: right;
+						padding: 2px 10px;
 						border: none;
 						outline: none;
+						color: #eee;
 						background: rgba($color: #eee, $alpha: 0.2);
 						border-radius: 2px;
+						transition: all 0.3s ease-in-out;
+						&[type="number"] {
+							border: 1px solid $color-secondary;
+						}
+						&::placeholder {
+							padding-inline-end: 5px;
+							@include font($Poppins, 16px);
+							color: rgba($color: #eee, $alpha: 0.4);
+							text-align: left;
+						}
+						@include arrow-input-disappear();
 					}
 					span {
 						@include font($Poppins, 16px);
@@ -47,9 +65,9 @@
 				.generate-button {
 					margin-top: 20px;
 					align-self: center;
-					@include font($Inter, 20px);
+					@include font($Poppins, 20px);
 					background: $color-btn;
-					color:$color-white;
+					color: $color-white;
 					border-radius: 10px;
 					padding: 10px 15px;
 				}
@@ -57,5 +75,3 @@
 		}
 	}
 }
-
-/* CSS */

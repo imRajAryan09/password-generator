@@ -12,57 +12,89 @@ const Generate = () => {
 				<div className="form-div">
 					<div className="form-items">
 						<div className="form-item">
-							<label for="len">Required Password Length :</label>
-							<div className="check-eg">
-								<input
-									type="text"
-									id="len"
-									name="len"
-									placeholder="Enter Password Length"
-								></input>
-							</div>
+							<label htmlFor="len">
+								Required Password Length :
+								<div className="check-eg">
+									<input
+										type="number"
+										id="len"
+										name="len"
+										placeholder="Enter Password Length"
+									></input>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="symbol">Include Symbols :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="symbol" name="symbol"></input>
-								<span>( e.g. @#$% )</span>
-							</div>
+							<label htmlFor="symbol">
+								Include Symbols :
+								<div className="check-eg">
+									<input type="checkbox" id="symbol" name="symbol"></input>
+									<span className="checkbox-custom"></span>
+									<span>( e.g. @#$% )</span>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="numbers">Include Numbers :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="numbers" name="numbers"></input>
-								<span>( e.g. 123456 )</span>
-							</div>
+							<label htmlFor="numbers">
+								Include Numbers :
+								<div className="check-eg">
+									<input type="checkbox" id="numbers" name="numbers"></input>
+									<span className="checkbox-custom"></span>
+									<span>( e.g. 123456 )</span>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="uppercase">Include Uppercase Characters :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="uppercase" name="uppercase"></input>
-								<span>( e.g. ABCDEFGH )</span>
-							</div>
+							<label htmlFor="uppercase">
+								Include Uppercase Characters :
+								<div className="check-eg">
+									<input
+										type="checkbox"
+										id="uppercase"
+										name="uppercase"
+									></input>
+									<span className="checkbox-custom"></span>
+									<span>( e.g. ABCDEFGH )</span>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="lowercase">Include Lowercase Characters :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="lowercase" name="lowercase"></input>
-								<span>( e.g. abcdefgh )</span>
-							</div>
+							<label htmlFor="lowercase">
+								Include Lowercase Characters :
+								<div className="check-eg">
+									<input
+										type="checkbox"
+										id="lowercase"
+										name="lowercase"
+									></input>
+									<span className="checkbox-custom"></span>
+									<span>( e.g. abcdefgh )</span>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="similar">Exclude Similar Characters :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="similar" name="similar"></input>
-								<span>( e.g. i, l, 1, L, o, 0, O )</span>
-							</div>
+							<label htmlFor="similar">
+								Exclude Similar Characters :
+								<div className="check-eg">
+									<input type="checkbox" id="similar" name="similar"></input>
+									<span className="checkbox-custom"></span>
+									<span>( e.g. i, l, 1, L, o, 0, O )</span>
+								</div>
+							</label>
 						</div>
 						<div className="form-item">
-							<label for="ambiguous">Exclude Ambiguous Characters :</label>
-							<div className="check-eg">
-								<input type="checkbox" id="ambiguous" name="ambiguous"></input>
-								<span>( {} [ ] ( ) / \ ' " ` ~ , ; : . &lt; &gt; )</span>
-							</div>
+							<label htmlFor="ambiguous">
+								Exclude Ambiguous Characters :
+								<div className="check-eg">
+									<input
+										type="checkbox"
+										id="ambiguous"
+										name="ambiguous"
+									></input>
+									<span className="checkbox-custom"></span>
+									<span>( {} [ ] ( ) / \ ' " ` ~ , ; : . &lt; &gt; )</span>
+								</div>
+							</label>
 						</div>
 						<button className="generate-button">Generate Password</button>
 					</div>
