@@ -5,20 +5,25 @@ header {
 	width: 100%;
 	@include flex(center, center);
 	transition: 0.3s ease all;
-	@include for-size(tablet-portrait) {
+	@include for-size(tablet) {
 		& {
 			height: $nav-height-mobile;
 		}
 	}
 	.header-content {
-		margin: $margin-desktop;
+		margin: $margin-desktop-large;
 		width: 100%;
 		overflow: hidden;
 		position: relative;
 		@include flex(space-between, center);
-		@include for-size(tablet-portrait) {
+		@include for-size(tablet) {
 			& {
 				margin: $margin-mobile;
+			}
+		}
+		@include for-size(desktop) {
+			& {
+				margin: $margin-desktop;
 			}
 		}
 		.logo {
@@ -26,7 +31,7 @@ header {
 			@include flex(center, center);
 			span {
 				@include font($Inter, 2rem, 600);
-				@include for-size(tablet-portrait) {
+				@include for-size(tablet) {
 					& {
 						@include font($Inter, 1.5rem, 600);
 					}
@@ -35,7 +40,7 @@ header {
 			&-icon {
 				margin-right: 10px;
 				font-size: 2rem;
-				@include for-size(tablet-portrait) {
+				@include for-size(tablet) {
 					& {
 						font-size: 1.5rem;
 						margin-right: 5px;
@@ -44,7 +49,7 @@ header {
 			}
 		}
 		nav {
-			@include for-size(tablet-portrait) {
+			@include for-size(tablet) {
 				& {
 					top: 0;
 					right: 100%;
@@ -66,7 +71,7 @@ header {
 			}
 			ul {
 				@include flex(space-between, center);
-				@include for-size(tablet-portrait) {
+				@include for-size(tablet) {
 					& {
 						@include flex(null, null, column);
 						gap: 20px;
@@ -81,11 +86,17 @@ header {
 					color: $color-primary;
 					@include font($Inter, 20px);
 					@include nav-animation();
-					@include for-size(tablet-portrait) {
+					@include for-size(tablet) {
 						& {
 							@include font($Inter, 24px);
 							@include nav-animation();
-							color:$color-secondary;
+							color: $color-secondary;
+						}
+					}
+					@include for-size(desktop) {
+						& {
+							@include font($Inter, 20px);
+							margin: 0 2rem;
 						}
 					}
 				}
@@ -99,7 +110,7 @@ header {
 				font-size: 2rem;
 			}
 			display: none;
-			@include for-size(tablet-portrait) {
+			@include for-size(tablet) {
 				& {
 					@include flex(center, center);
 					transition: 0.3s ease all;

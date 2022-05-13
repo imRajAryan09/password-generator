@@ -9,7 +9,8 @@ $Poppins: "Poppins", sans-serif;
 $Inter: "Inter", sans-serif;
 
 // margins
-$margin-desktop: 0 125px;
+$margin-desktop-large: 0 125px;
+$margin-desktop: 0 75px;
 $margin-mobile: 0 40px;
 $margin-generate: 100px 0;
 
@@ -33,20 +34,12 @@ $nav-height-mobile: 60px;
 
 // media queries
 @mixin for-size($size) {
-	@if $size == tablet-portrait {
+	@if $size == tablet {
 		@media screen and(max-width: 768px) {
 			@content;
 		}
-	} @else if $size == tablet-landscape {
-		@media (min-width: 900px) {
-			@content;
-		}
 	} @else if $size == desktop {
-		@media (min-width: 1200px) {
-			@content;
-		}
-	} @else if $size == desktop-large {
-		@media (min-width: 1800px) {
+		@media (max-width: 1024px) {
 			@content;
 		}
 	}
