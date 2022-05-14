@@ -35,11 +35,11 @@ $nav-height-mobile: 60px;
 // media queries
 @mixin for-size($size) {
 	@if $size == tablet {
-		@media screen and(max-width: 768px) {
+		@media only screen and(max-width: 768px) {
 			@content;
 		}
 	} @else if $size == desktop {
-		@media (max-width: 1024px) {
+		@media only screen and (max-width: 1024px) {
 			@content;
 		}
 	}
@@ -174,7 +174,7 @@ $nav-height-mobile: 60px;
 		}
 	}
 	input[type="checkbox"]:checked ~ .checkbox-custom {
-		background-color: #fff;
+		background-color: #eee;
 		border-radius: 5px;
 		transform: rotate(0deg) scale(1);
 		opacity: 1;
