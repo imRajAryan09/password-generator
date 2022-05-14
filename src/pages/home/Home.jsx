@@ -1,14 +1,12 @@
-import Navbar from "../../components/navbar/Navbar";
-// import Announcement from "../../components/announcement/Announcement";
 import "./home.scss";
-import BgSvg from "../../assets/hero-svg-pwdgen.png";
+import Navbar from "../../components/navbar/Navbar";
 import Lock from "../../components/lock/Lock";
+import BgSvg from "../../assets/hero-svg-pwdgen.png";
 import { Link } from "react-router-dom";
 const Home = () => {
 	return (
 		<div className="home">
 			<div className="nav-component">
-				{/* <Announcement/> */}
 				<Navbar />
 			</div>
 			<div className="home-content">

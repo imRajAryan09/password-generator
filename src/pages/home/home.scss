@@ -29,7 +29,7 @@
 			@include for-size(tablet) {
 				& {
 					gap: 10px;
-					justify-content: flex-start;
+					@include flex(flex-start, center, column);
 				}
 			}
 			@include for-size(desktop) {
@@ -91,7 +91,6 @@
 				@include for-size(tablet) {
 					& {
 						padding: 15px 25px;
-						align-self: center;
 						gap: 10px;
 						span {
 							@include font($Inter, 18px, 400);

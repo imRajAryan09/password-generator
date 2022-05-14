@@ -10,6 +10,7 @@
 		h1 {
 			@include font($Inter, 64px, 800);
 			color: $color-secondary;
+			text-align: center;
 		}
 	}
 }

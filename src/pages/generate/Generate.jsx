@@ -5,7 +5,6 @@ const Generate = () => {
 	return (
 		<div className="generate">
 			<div className="nav-component">
-				{/* <Announcement/> */}
 				<Navbar />
 			</div>
 			<div className="generate-content">
