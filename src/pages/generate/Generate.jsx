@@ -1,7 +1,10 @@
+import { useState } from "react";
+import Modal from "../../components/modal/Modal";
 import Navbar from "../../components/navbar/Navbar";
 import "./generate.scss";
 
 const Generate = () => {
+	const [show, setShow] = useState(false);
 	return (
 		<div className="generate">
 			<div className="nav-component">
@@ -96,7 +99,14 @@ const Generate = () => {
 							</label>
 						</div>
 					</div>
-					<button className="generate-button">Generate Password</button>
+					<button onClick={() => setShow(true)} className="generate-button">
+						Generate Password
+					</button>
+					<Modal
+						onClose={() => setShow(false)}
+						show={show}
+						pwd={"Coming Up Soon !!!"}
+					/>
 				</div>
 			</div>
 		</div>

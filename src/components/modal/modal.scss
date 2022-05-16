@@ -1,0 +1,76 @@
+@import "../../styles/variables.scss";
+.modal {
+	& {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include flex(center, center);
+		background-color: rgba($color-secondary, 0.2);
+		backdrop-filter: blur(2px);
+		transition: 0.3s ease transform;
+		z-index: 1;
+		pointer-events: none;
+		opacity: 0;
+	}
+	&.show {
+		opacity: 1;
+		pointer-events: visible;
+	}
+	&-content {
+		width: 500px;
+		height: 300px;
+		background-color: $color-secondary;
+		transition: all 0.3s ease-in-out;
+		transform: translateY(-200px);
+		border-radius: 5px;
+		@include flex(center, center, column);
+        text-align: center;
+		gap: 15px;
+		@include for-size(mobile) {
+			& {
+				padding: 20px;
+                width: 90%;
+			}
+		}
+	}
+	&.show &-content {
+		transform: translateY(0);
+	}
+	&-header {
+		@include flex(center, center);
+		@include font($Inter, 20px);
+		padding: 10px;
+		color: $color-primary;
+	}
+	&-body {
+		@include flex(space-between, center);
+		@include font($Inter, 18px);
+		padding: 10px 20px;
+		background-color: rgba($color-primary, 0.2);
+		border-radius: 60px;
+		color: $color-primary;
+        width: 90%;
+		.copy-icon {
+			cursor: pointer;
+		}
+		
+	}
+	&-footer {
+		@include flex(center, center);
+		@include font($Inter, 18px);
+		padding: 10px;
+		.close {
+			cursor: pointer;
+			background-color: rgba($color: $color-btn, $alpha: 0.8);
+			color: $color-white;
+			border-radius: 5px;
+			padding: 3px 15px;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background-color: rgba($color: $color-btn, $alpha: 1);
+			}
+		}
+	}
+}
