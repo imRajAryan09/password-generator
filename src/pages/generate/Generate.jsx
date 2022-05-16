@@ -95,8 +95,8 @@ const Generate = () => {
 								</div>
 							</label>
 						</div>
-						<button className="generate-button">Generate Password</button>
 					</div>
+					<button className="generate-button">Generate Password</button>
 				</div>
 			</div>
 		</div>

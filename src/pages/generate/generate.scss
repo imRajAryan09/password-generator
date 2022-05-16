@@ -7,16 +7,37 @@
 	.generate-content {
 		@include flex(center, center);
 		min-height: calc(100vh - 80px); // 80px is the height of the navbar
-		gap: 40px;
 		.form-div {
-			@include flex(center, flex-start);
+			@include flex(flex-start, center, column);
 			background: $color-generate-box;
 			border-radius: 10px;
+			padding: 50px;
+			@include for-size(tablet) {
+				& {
+					padding: 30px;
+				}
+			}
+			@include for-size(mobile) {
+				& {
+					padding: 20px;
+					padding-bottom: 30px;
+				}
+			}
 			.form-items {
 				@include flex(center, flex-start, column);
-				padding: 80px 60px;
+				padding: 40px 60px;
 				gap: 20px;
-				flex-wrap: wrap;
+				flex-wrap: wrap-reverse;
+				@include for-size(tablet) {
+					& {
+						padding: 20px;
+					}
+				}
+				@include for-size(mobile) {
+					& {
+						gap: 25px;
+					}
+				}
 				.form-item {
 					@include flex(space-between, center);
 					width: 100%;
@@ -32,6 +53,13 @@
 						padding-inline: 10px;
 						width: 100%;
 						gap: 50px;
+						@include for-size(mobile) {
+							& {
+								@include flex(space-between, center, column);
+								gap: 5px;
+								@include font($Poppins, 16px);
+							}
+						}
 					}
 					input {
 						@include font($Poppins, 20px);
@@ -54,22 +82,41 @@
 							text-align: left;
 						}
 						@include arrow-input-disappear();
+						@include for-size(mobile) {
+							& {
+								@include font($Poppins, 18px);
+								text-align: center;
+								&::placeholder {
+									text-align: center;
+								}
+							}
+						}
 					}
 					span {
 						@include font($Poppins, 16px);
 						padding-inline: 5px;
 						color: $color-secondary;
 						font-style: italic;
+						@include for-size(mobile) {
+							& {
+								@include font($Poppins, 14px);
+							}
+						}
 					}
 				}
-				.generate-button {
-					margin-top: 20px;
-					align-self: center;
-					@include font($Poppins, 20px);
-					background: $color-btn;
-					color: $color-white;
-					border-radius: 10px;
-					padding: 10px 15px;
+			}
+			.generate-button {
+				margin-top: 20px;
+				align-self: center;
+				@include font($Poppins, 20px);
+				background: $color-btn;
+				color: $color-white;
+				border-radius: 10px;
+				padding: 10px 15px;
+				@include for-size(mobile) {
+					& {
+						@include font($Poppins, 18px);
+					}
 				}
 			}
 		}
