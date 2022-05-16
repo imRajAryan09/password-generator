@@ -10,7 +10,7 @@
 		gap: 40px;
 		.form-div {
 			@include flex(center, flex-start);
-			background: #023b57;
+			background: $color-generate-box;
 			border-radius: 10px;
 			.form-items {
 				@include flex(center, flex-start, column);

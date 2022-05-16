@@ -25,7 +25,7 @@
 			@include flex(space-between, flex-start, column);
 			flex: 1;
 			gap: 30px;
-			color: #cfe8f3;
+			color: $color-secondary;
 			@include for-size(tablet) {
 				& {
 					gap: 10px;
