@@ -28,6 +28,7 @@
 		@include flex(center, center, column);
         text-align: center;
 		gap: 15px;
+		box-shadow: 0px 3px 3px 0px rgba(2,48,71,1);
 		@include for-size(mobile) {
 			& {
 				padding: 20px;
